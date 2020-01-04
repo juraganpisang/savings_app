@@ -1,0 +1,35 @@
+database: listin_app
+
+1. user_roles
+	- role_id (pk)
+	- role_name
+	
+2. users
+	- user_id (pk)
+	- username
+	- email
+	- password
+	- image
+	- register_date
+	- role_id  (fk)
+
+3. lists
+	- list_id (pk)
+	- title
+	- desc 
+	- est_cost
+	- time_period (tanggal yang ingin dicapai)
+	- save_freq
+	- save_amount
+	- status (ongoing, completed, cancelled)
+	- user_id (fk)
+	
+4. list_details
+	- detail_id (pk)
+	- datetime
+	- action (deposit, withdraw)
+	- amount
+	- list_id (fk)
+	
+wallet bisa sepenuhnya dikelola dari tabel list_details.
+	
